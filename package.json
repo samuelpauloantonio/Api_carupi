@@ -26,6 +26,7 @@
     "ts-jest": "^27.0.3"
   },
   "dependencies": {
+    "@shelf/jest-mongodb": "^1.2.5",
     "@types/faker": "^5.5.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
