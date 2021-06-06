@@ -1,18 +1,17 @@
 {
     "type": "mongodb",
     "host": "localhost",
+
     "port": 27017,
-    "useNewUrlParser":true,
-    "useUnifiedTopology":true,
-    "username": "",
-    "password": "",
+    "username":"",
+    "password":"",
+
     "database": "vehicles",
-    "entities": ["./src/models/*.ts"],
+    "useNewUrlParser": true,
+    "useUnifiedTopology": true,
+    "entities": ["./src/modules/cars/models/*.ts"],
     "migrations": ["./src/database/migrations/*.ts"],
     "cli": {
-
-      "migrationsDir": "./src/database/migrations"
+        "migrationsDir": "./src/database/migrations"
     }
-
-  }
-
+}

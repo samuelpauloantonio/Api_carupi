@@ -1,5 +1,4 @@
-import { CreateCarsServices } from './createCars.services';
+import { CreateCarsControllers } from './createCars.controllers';
 
-const createCarsServices = new CreateCarsServices();
-
-export { createCarsServices };
+const CreateCarsController = new CreateCarsControllers();
+export { CreateCarsController };

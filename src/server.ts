@@ -1,15 +1,9 @@
-import dotEnv from 'dotenv';
 import express, { Request, Response, NextFunction } from 'express';
+import 'express-async-errors';
 import Routes from './routes';
 
-import 'reflect-metadata';
 import './database';
-
-import 'express-async-errors';
-
 import AppError from './erros/AppError';
-
-dotEnv.config();
 
 const server = express();
 server.use(express.json());
