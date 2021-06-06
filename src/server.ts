@@ -1,9 +1,15 @@
+import { config } from 'dotenv';
 import express, { Request, Response, NextFunction } from 'express';
 import 'express-async-errors';
 import Routes from './routes';
-
-import './database';
+import { connection } from './database';
 import AppError from './erros/AppError';
+
+config();
+
+(async () => {
+    await connection();
+})();
 
 const server = express();
 server.use(express.json());

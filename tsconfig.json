@@ -71,6 +71,7 @@
       "./**/*"
       ],
   "exclude": [
+      "./node_modules",
       "./plugins/**/*",
       "./typings/**/*",
       "./built/**/*" // This is what fixed it!
