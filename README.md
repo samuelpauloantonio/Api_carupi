@@ -116,6 +116,12 @@ Antecedido pelo metodo HTTP  que queremos
  ```
 <br/>
 
+
+
+![home page](https://github.com/samuelpauloantonio/Api_carupi/blob/main/public/assets/allcars.png?raw=true)
+
+
+
  ### `NA ROTA GET by id`
 
  Permetido buscar apenas um carro que exista pelo seu id
@@ -124,6 +130,13 @@ Antecedido pelo metodo HTTP  que queremos
  GET/:id  http://localhost:veiculos/60bc34b5a042da797d265f19
  ```
 <br/>
+
+
+
+![home page](https://github.com/samuelpauloantonio/Api_carupi/blob/main/public/assets/finByid.png?raw=true)
+
+
+
 
  ### `NA ROTA GET by query`
 
@@ -141,6 +154,10 @@ Antecedido pelo metodo HTTP  que queremos
   ```
  GET/search - http://localhost:3333/veiculos/search?ano=2013
  ```
+
+
+![home page](https://github.com/samuelpauloantonio/Api_carupi/blob/main/public/assets/findbyTerm.png?raw=true)
+
 
  ### `NA ROTA POST `
 
@@ -161,6 +178,12 @@ Todos os campos são obrigátorios,
 }
 
  ```
+ 
+ 
+ ![home page](https://github.com/samuelpauloantonio/Api_carupi/blob/main/public/assets/create.png?raw=true)
+ 
+ 
+ 
 <br/>
 
  ### `NA ROTA PUT by id`
@@ -180,6 +203,12 @@ Todos os campos são obrigátorios,
 	"tipo_de_cambio":"comprado"
 }
  ```
+ 
+ 
+  ![home page](https://github.com/samuelpauloantonio/Api_carupi/blob/main/public/assets/put.png?raw=true)
+ 
+ 
+ 
 <br/>
 
  ### `NA ROTA DELETE by id`
