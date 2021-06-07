@@ -156,7 +156,7 @@ Antecedido pelo metodo HTTP  que queremos
  ```
 
 
-![home page](https://github.com/samuelpauloantonio/Api_carupi/blob/main/public/assets/findbyTerm.png?raw=true)
+![home page]('../../public/assets/search.png')
 
 
  ### `NA ROTA POST `
@@ -178,12 +178,12 @@ Todos os campos são obrigátorios,
 }
 
  ```
- 
- 
+
+
  ![home page](https://github.com/samuelpauloantonio/Api_carupi/blob/main/public/assets/create.png?raw=true)
- 
- 
- 
+
+
+
 <br/>
 
  ### `NA ROTA PUT by id`
@@ -203,12 +203,12 @@ Todos os campos são obrigátorios,
 	"tipo_de_cambio":"comprado"
 }
  ```
- 
- 
+
+
   ![home page](https://github.com/samuelpauloantonio/Api_carupi/blob/main/public/assets/put.png?raw=true)
- 
- 
- 
+
+
+
 <br/>
 
  ### `NA ROTA DELETE by id`
