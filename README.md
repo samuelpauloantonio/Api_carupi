@@ -156,7 +156,7 @@ Antecedido pelo metodo HTTP  que queremos
  ```
 
 
-![home page]('../../public/assets/search.png')
+![home page](https://github.com/samuelpauloantonio/Api_carupi/blob/main/public/assets/search.png?raw=true)
 
 
  ### `NA ROTA POST `
