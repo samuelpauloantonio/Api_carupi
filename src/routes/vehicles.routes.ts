@@ -23,9 +23,14 @@ routes.post(
         return CreateCarsController.handle(request, response);
     },
 );
-routes.put('/:id', (request, response) => {
-    return updateCarsControllers.handle(request, response);
-});
+routes.put(
+    '/:id',
+    fieldTovalidate,
+    CheckFileds,
+    (request: Request, response: Response) => {
+        return updateCarsControllers.handle(request, response);
+    },
+);
 routes.delete('/:id', async (request, response) => {
     return deleteOneCar.handle(request, response);
 });

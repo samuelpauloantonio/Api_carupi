@@ -34,7 +34,7 @@ const fieldTovalidate = [
     body('quilometragem')
         .exists({ checkFalsy: true })
         .withMessage('CAMPO quilometragem É REQUERODO')
-        .isLength({ min: 4 })
+        .isLength({ min: 1 })
         .withMessage('PRECISA TER NO MINIMO 4 NÚMEROS'),
 
     body('preco_de_venda')
