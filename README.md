@@ -5,7 +5,7 @@
 <br/>
 
 
-O desáfio consiste em criar API REST  com as funcionalidade principais de um CRUD, seguindo alguns principios da programação como o SOLID  E TDD.
+O desáfio consiste em criar uma API REST,  com as funcionalidade principais de um CRUD, seguindo alguns princípios da programação como o SOLID  E TDD.
 
 ---
 
@@ -13,7 +13,7 @@ O desáfio consiste em criar API REST  com as funcionalidade principais de um CR
 
 ## Principas Funcionalidades
 
-Criar um gerenciamento onde seja possível ```` Criar, Listar, Editar e Visualizar um carro````.
+Criar um gerenciamento de carro ,onde seja possível ```` Criar, Listar, Editar e Visualizar um carro````.
 Atributos de um Carro são:
 - Marca
 - Model
@@ -24,7 +24,7 @@ Atributos de um Carro são:
 - Preço de venda
 <br>
 ## Instruções:
-- Deve ser utilizado NodeJS e MongoDb
+- Deve ser utilizado ``NodeJS e MongoDb``
 - Crie um README com orientações para a instalação.
 - O projeto deve ser entregue através de um ou mais repositórios no github.
 <br/>
@@ -41,8 +41,8 @@ Atributos de um Carro são:
 - NODE JS - `para trazer o javascript no backend`
 - JEST -      `para fazer os testes`
 - TYPESCRIPT - `para dar tipagem ao javascript `
-- MONGODB - `como Bando de Dados`
-- TYPEORM `para ajudar no mapeamento do bando `
+- MONGODB - `usando como o Banco de Dados`
+- TYPEORM `para ajudar no mapeamento do banco `
 - EXPRESS-VALIDATOR - `para validar as rotas`
 - GIT `para controlo de verção do projecto`
 ----
@@ -50,7 +50,7 @@ Atributos de um Carro são:
 <br/>
 
 ## CONFIGURAÇÕES INICIAS
--- Primero temos que install as dependências do projecto seja utilizando o gerenciador de patocos ````  Yarn OU NPM ```` e no directório do projecto no terminar rodar :
+-- Primero temos que instalar as dependências do projecto seja utilizando o gerenciador de patocos ````  Yarn OU NPM ```` e no directório do projecto no terminar vamos rodar :
 ```
   yarn  | npm install
 ```
@@ -60,7 +60,7 @@ Atributos de um Carro são:
 
 ###  Aseguir devemos ter na nossa maquina instalado o banco de Dados o ```MongoDB``` .
 
-Para fazer a conexão basta no directório do projecto localizar o arquivo ```.env``` e modificalo com base as configurações do nosso banco de dados com a ``URL pode ser localhost ``caso seja local, a`` PORTA do banco de dados do MongoDB``, o ``USERNAME``, a ``PASSWORD`` e o ``NOME DO DATABASE OU BANCO DE DADOS``..  exemplos do meu
+Para fazer a conexão basta no directório do projecto localizar o arquivo ```.env``` e modificalo com base as configurações do nosso banco de dados com a ``URL pode ser localhost ``caso seja local, a`` PORTA do banco de dados do MongoDB 27017``, o ``USERNAME``, a ``PASSWORD`` e o ``NOME DO DATABASE OU BANCO DE DADOS``..  exemplos do meu
 
 ```
 DB_MONGO_URL  = localhost,
@@ -69,7 +69,7 @@ DB_USERNAME = ""
 DB_PASSWORD = ""
 DATABASE = vehicles
 ```
-Assim basta apenas modicar o arquivo com base as tuas configurações .
+Assim basta apenas modicar o arquivo com base as tuas configurações ``e criar um banco de Dados com o nome da DATABASE vehicles ``.
 <br/>
 <br/>
 
@@ -77,11 +77,11 @@ Assim basta apenas modicar o arquivo com base as tuas configurações .
  <br/>
 
  -  ``Depois de instalar as dependências do projecto``
- -  ```Intalar o Banco de Dados MongoDB```
+ -  ```Instalar o Banco de Dados MongoDB```
  -  ``e configurado o arquivo .env``
 
 
- basta rodar o comando no raiz do projecto e terminal
+ basta rodar o comando na raiz do projecto e terminal
 ```
 yarn dev:server | npm run dev:server
 ```
@@ -89,6 +89,7 @@ yarn dev:server | npm run dev:server
 ## COMO UTILIZAR API REST
 
 Para ajudar no processo precisaremos de uma aplicação Client API como o`` Insomnia ou Postman``
+para fazer requizição http
 
 Com ele instalados basta apenas colocar a seguinte URL
 ```
@@ -108,7 +109,7 @@ Antecedido pelo metodo HTTP  que queremos
 
 ### `NA ROTA GET`
 
- Nesta rota lista todos os carros cadastrados ou não caso não exista nenhum `exemplo :`
+ Nesta rota lista todos os carros cadastrados ou um array vazio caso não exista nenhum `exemplo :`
 
  ```
  GET  http://localhost:veiculos/
@@ -116,6 +117,7 @@ Antecedido pelo metodo HTTP  que queremos
 <br/>
 
  ### `NA ROTA GET by id`
+
  Permetido buscar apenas um carro que exista pelo seu id
 
   ```
@@ -127,7 +129,8 @@ Antecedido pelo metodo HTTP  que queremos
 
 
 
-  Nesta rota lista todos  os carros cadastrados filtrados por todos os atributos do carro seja, - Marca
+  Nesta rota lista todos  os carros cadastrados filtrados por todos os atributos do carro seja,
+
 - Model
 - Versão
 - Ano
@@ -136,26 +139,27 @@ Antecedido pelo metodo HTTP  que queremos
 - Preço de venda.
 -  ou não caso não exista nenhum `exemplo :`
   ```
- GET/:query - http://localhost:3333/veiculos?ano=2013
+ GET/search - http://localhost:3333/veiculos/search?ano=2013
  ```
 
  ### `NA ROTA POST `
 
 Todos os campos são obrigátorios,
 
--Não poderá criar carros com os 4 dados iguais de uma so vez caso já exista o carro com os mesmos dados com` a mesma marca , mesmo model,  mesma versao e mesmo ano , este carro não sera criado caso ja exista um igual`
+-Não poderá criar carros com os 4 dados iguais de uma só vez caso já exista o carro com os mesmos dados com` a mesma marca , mesmo model,  mesma versao e  omesmo ano , este carro não sera criado caso ja exista um igual`
  ```
  POST/  http://localhost:veiculos/
 
- {
-	"marca" :"Toita Corola",
-	"model" : "X9",
-	"versao" : "v4",
+{
+	"marca" :"Hummer",
+	"model" : "H2",
+	"versao" : "v8",
 	"ano":2013,
 	"quilometragem":4525,
-	"preco_de_venda":12600,
+	"preco_de_venda":18600,
 	"tipo_de_cambio":"vendido"
 }
+
  ```
 <br/>
 
@@ -195,5 +199,5 @@ Todos os campos são obrigátorios,
 
   ****
   <br/><br/>
-  ### ``Os Melhores comprimentos com amor 😁❤️  Samuel Paulo Antónioc - samuelDev``
+  ### ``Os Melhores comprimentos com amor 😁❤️  Samuel Paulo António - samuelDev``
   ---

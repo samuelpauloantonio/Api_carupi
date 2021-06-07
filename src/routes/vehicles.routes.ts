@@ -3,12 +3,19 @@ import { fieldTovalidate } from '../modules/cars/middlewares/fieldToValidate';
 import { CheckFileds } from '../modules/cars/middlewares/validator.body';
 import { CreateCarsController } from '../modules/cars/services/createCars';
 import { deleteOneCar } from '../modules/cars/services/DeleteCars';
-import { ListOneCar, findByTerm } from '../modules/cars/services/ListCars';
+import {
+    ListOneCar,
+    findByTerm,
+    listAllCarsControllers,
+} from '../modules/cars/services/ListCars';
 import { updateCarsControllers } from '../modules/cars/services/updateCars';
 
 const routes = express.Router();
 
 routes.get('/', (request, respose) => {
+    return listAllCarsControllers.handle(request, respose);
+});
+routes.get('/search', (request, respose) => {
     return findByTerm.handle(request, respose);
 });
 routes.get('/:id', (request, respose) => {
